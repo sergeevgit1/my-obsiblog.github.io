@@ -418,16 +418,20 @@ p {
 
 .table-container {
   overflow-x: auto;
+  border: 2;
+  color: var(--dark);
 
   & > table {
     margin: 0rem;
     padding: 1.5rem;
     border-collapse: collapse;
     width: 100%;
+    border: 2px solid white;
 
     th,
     td {
-      min-width: 75px;
+      min-width: 40%;
+      border: 1px solid;
     }
 
     & > * {
@@ -437,13 +441,13 @@ p {
 }
 
 th {
-  text-align: left;
+  text-align: center;
   padding: 0.4rem 0.7rem;
   border-bottom: 2px solid var(--gray);
 }
 
 td {
-  padding: 0.2rem 0.7rem;
+  padding: 1.2rem 0.7rem;
 }
 
 tr {
