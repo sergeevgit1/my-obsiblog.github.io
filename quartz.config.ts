@@ -10,12 +10,12 @@ const config: QuartzConfig = {
   configuration: {
     pageTitle: "🪴 Open Canva",
     enableSPA: true,
-    enablePopovers: true,
+    enablePopovers: false,
     analytics: {
       provider: "plausible",
     },
     locale: "ru-RU",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "opencanva.vercel.app/",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
