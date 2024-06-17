@@ -420,9 +420,10 @@ p {
   overflow-x: auto;
 
   & > table {
-    margin: 1rem;
+    margin: 0rem;
     padding: 1.5rem;
     border-collapse: collapse;
+    width: 100%;
 
     th,
     td {
@@ -430,7 +431,7 @@ p {
     }
 
     & > * {
-      line-height: 2rem;
+      line-height: 1rem;
     }
   }
 }
