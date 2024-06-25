@@ -17,7 +17,7 @@ const config: QuartzConfig = {
     locale: "ru-RU",
     baseUrl: "opencanva.vercel.app/quartz",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "created",
+    defaultDateType: "modifed",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
