@@ -9,8 +9,16 @@ export function byDateAndAlphabetical(
 ): (f1: QuartzPluginData, f2: QuartzPluginData) => number {
   return (f1, f2) => {
     if (f1.dates && f2.dates) {
-      // sort descending
-      return getDate(cfg, f2)!.getTime() - getDate(cfg, f1)!.getTime()
+      const date1 = getDate(cfg, f1)
+      const date2 = getDate(cfg, f2)
+
+      // Проверка на наличие действительной даты
+      if (date1 && date2) {
+        // sort descending
+        return date2.getTime() - date1.getTime()
+      } else {
+        console.log(`Warning: Invalid date for ${!date1 ? f1.slug : f2.slug}`)
+      }
     } else if (f1.dates && !f2.dates) {
       // prioritize files with dates
       return -1
@@ -19,8 +27,8 @@ export function byDateAndAlphabetical(
     }
 
     // otherwise, sort lexographically by title
-    const f1Title = f1.frontmatter?.title.toLowerCase() ?? ""
-    const f2Title = f2.frontmatter?.title.toLowerCase() ?? ""
+    const f1Title = f1.frontmatter?.title?.toLowerCase() ?? ""
+    const f2Title = f2.frontmatter?.title?.toLowerCase() ?? ""
     return f1Title.localeCompare(f2Title)
   }
 }
