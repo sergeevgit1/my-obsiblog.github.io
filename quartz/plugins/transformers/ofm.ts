@@ -269,7 +269,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> 
                   } else if ([".pdf"].includes(ext)) {
                     return {
                       type: "html",
-                      value: `<iframe width='100%' height=500vh' src="${url}#toolbar=1&navpanes=0&scrollbar=0$seamless=1"></iframe>`,
+                      value: `<iframe width='100%' height=500vh' src="${url}#toolbar=1&navpanes=0&scrollbar=0&seamless"></iframe>`,
                     }
                   } else {
                     const block = anchor
